@@ -1,8 +1,17 @@
 Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
-  root to: 'dashboards#dashboard_1'
+  root to: 'homes#index'
 
+  # Gomakproduction
+  get "homes/index"
+
+  # Project Managing
+  get "projects/index"
+  get "projects/new"
+  get "projects/create"
+  get "projects/edit/:id", to: 'projects#edit'
+  get "projects/update/:id", to: 'projects#update'
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"

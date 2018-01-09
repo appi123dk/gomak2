@@ -1,0 +1,36 @@
+<div class="middle-box text-center  animated fadeInDown">
+    <div>
+        <div style="padding-top: 70px">
+
+            <h3 class="logo-name" style="font-size: 80px; color: #000">GOMAKCULTURE</h1>
+
+        </div>
+        <h3 style="margin-top: 50px;">프로젝트 등록</h3>
+        <p>
+            영상 프로젝트에 대한 정보를 입력하세요
+        </p>
+        <form class="m-t" role="form" action="/projects/create" method="GET">
+            <label class="col-lg-4 control-label" style="margin-top: 7px">프로젝트명 : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="project_name" required="" style="text-align: right">
+            </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px">브랜드명 : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="brand_name" required="" style="text-align: right">
+            </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px">영상 URL : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="video_url" required="" style="text-align: right">
+            </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px">썸네일 URL : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="thumb_url" required="" style="text-align: right">
+            </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px"></label>
+            <div class="form-group col-lg-8">
+                <button type="submit" class="btn btn-warning block full-width m-b">등록</button>
+            </div>
+        </form>
+        <!-- <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2015</small> </p> -->
+    </div>
+</div>

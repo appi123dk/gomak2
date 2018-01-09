@@ -1,0 +1,517 @@
+   <a class="logo logo-light scrollToTop">
+    <div class="logo-img"></div></a><!-- logo end -->
+    <!-- navigation button start -->
+    <button class="navigation-toggle" data-navigation-toggle="toggle"><span class="navigation-toggle-icon"><span class="navigation-toggle-bars navigation-toggle-bars-light"></span> <span class=
+    "navigation-toggle-bars navigation-toggle-bars-light"></span> <span class="navigation-toggle-bars navigation-toggle-bars-light"></span></span></button><!-- navigation button end -->
+    <!-- navigation overlay start -->
+    <div class="navigation-overlay"></div><!-- navigation overlay end -->
+    <!-- navigation start -->
+    <nav class="navigation">
+        <!-- center container start -->
+        <div class="center-container">
+            <!-- center block start -->
+            <div class="center-block">
+                <!-- navigation menu start -->
+                <ul class="menu main-menu">
+                    <li class="menu-item">
+                        <a class="menu-link link-underline-menu" data-scroll-section="home" href="#">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link link-underline-menu" data-scroll-section="works" href="#">Works</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link link-underline-menu" data-scroll-section="about" href="#">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link link-underline-menu" data-scroll-section="contact" href="#">Contact</a>
+                    </li>
+                </ul><!-- navigation menu end -->
+                <!-- navigation social icons start -->
+                <div class="navigation-social-icons">
+                    <ul class="social-icons">
+                        <!-- <li class="social-icon">
+                            <a class="ion-social-twitter" href="#"></a>
+                        </li> -->
+                        <li class="social-icon">
+                            <a class="ion-social-facebook" href="#"></a>
+                        </li>
+                        <!-- <li class="social-icon">
+                            <a class="ion-social-googleplus" href="#"></a>
+                        </li> -->
+                        <li class="social-icon">
+                            <a class="ion-social-instagram" href="https://www.instagram.com/gomakproduction/"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-youtube" href="https://www.youtube.com/channel/UCv3M_u48L4jCo_tUys-n0yA?view_as=subscriber"></a>
+                        </li>
+                        <!-- <li class="social-icon">
+                            <a class="ion-social-linkedin" href="#"></a>
+                        </li> -->
+                        
+                        <li class="social-icon">
+                            <a class="ion-social-vimeo" href="#"></a>
+                        </li>
+                        <!-- <li class="social-icon">
+                            <a class="ion-social-pinterest" href="#"></a>
+                        </li> -->
+                        <!-- <li class="social-icon">
+                            <a class="ion-social-dribbble" href="#"></a>
+                        </li> -->
+                    </ul>
+                </div><!-- navigation social icons end -->
+            </div><!-- center block end -->
+        </div><!-- center container end -->
+    </nav><!-- navigation end -->
+    <!-- home page start -->
+    <div class="home-page light-logo">
+        <!-- hero bg start -->
+        <div class="hero-fullscreen">
+            <!-- single image start -->
+            <div class="parallax-window" data-image-src="/assets/gomakproduction/main_banner.jpg" data-parallax="scroll"></div><!-- single image end -->
+        </div><!-- hero bg end -->
+        <!-- home page overlay start -->
+            <!-- <div class="home-page-overlay"></div> -->
+        <!-- home page overlay end -->
+        <!-- center container start -->
+        <div class="center-container">
+            <!-- center block start -->
+            <!-- <div class="center-block">
+                <h1 class="home-page-title">Rebel!</h1>
+                <div class="home-page-subtitle-carousel owl-carousel">
+                    <h2 class="home-page-title">
+                        <a data-scroll-to="about" href="#">Simplicity is complex</a>
+                    </h2>
+                    <h2 class="home-page-title">
+                        <a data-scroll-to="about" href="#">Design is a process</a>
+                    </h2>
+                    <h2 class="home-page-title">
+                        <a data-scroll-to="about" href="#">Aesthetic is a decision</a>
+                    </h2>
+                    <h2 class="home-page-title">
+                        <a data-scroll-to="about" href="#">Style is everything</a>
+                    </h2>
+                </div>
+            </div> --><!-- center block end -->
+        </div><!-- center container end -->
+    </div><!-- home page end -->
+    <!-- page wrapper start -->
+    <div class="page-wrapper">
+        
+        <!-- works page start -->
+        <div class="section section-works" id="works">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row alt">
+                    <h2 class="section-title">
+                        Works
+                    </h2>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <div class="section-all-subtitle" style="font-style:normal">
+                        <span class="section-all-subtitle-first">고막프로덕션의 One-Stop 영상제작 솔루션을 통해 </span><br>
+                        컨텐츠 제작부터 디지털 컨텐츠 유통까지 한 번에 해결할 수 있습니다.
+                    </div>
+                </div><!-- row end -->
+            </div><!-- container end -->
+            <!-- photoSwipe start -->
+            <div class="container" style="padding: 0px 0px;">
+                <div class="legendary-gallery">
+                    <% @projects.each do |project| %>
+                    <!-- gallery item 1 start -->
+                    <figure class="col-xl-6 col-lg-6 col-md-6 col-sm-6 image-works">
+                        <a><img alt="Image description"  class="img-responsive project-img" src="<%= project.thumb_url %>"></a>
+                        <figcaption>
+                            <span class="img-caption">이미지캡션</span>
+                            <div class="hover-effect">
+                            </div>
+                            <div class="icon-works">
+                                <h1 style="margin-bottom: 0px;"><%= project.project_name %></h1>
+                                <h2 style="color:#fff; text-align: left; margin-bottom: 20px; font-weight:bold"><%= project.brand_name %></h2>
+                                <!-- <a class="iw-slide-right" style="float:left" href="#">자세히보기</a> -->
+                                <a class="ion-ios-play" style="float:left" data-lity="" href="<%= project.video_url %>"> 재생</a>
+                            </div>
+                        </figcaption>
+                    </figure><!-- gallery item 1 end -->
+                    <% end %>
+
+                    <figure class="col-sm-12 ">
+                        <button class="c-btn fullwidth" id="submit" type="button" data-scroll-to="contact" style="text-align:center; width:100%"><span>문의남기러가기</span></button>
+                    </figure>
+                </div><!-- photoSwipe end -->
+
+            </div>
+        </div><!-- works page end -->
+
+        <!-- about page start -->
+        <div class="section section-about" id="about">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row alt">
+                    <h2 class="section-title">
+                        About
+                    </h2>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <div class="section-all-subtitle" style="font-style: normal">
+                        <span class="section-all-subtitle-first">영상 컨텐츠 제작은 정답이 없습니다.</span><br>
+                        전달하고 싶은 메시지를 가장 잘 전달할 수 있는 형태와 기술을 활용하여야 합니다.
+                    </div>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <!-- col left start -->
+                    <div class="col-md-4">
+                        <div class="quotations">
+                            <span class="quote-mark-l ion-quote"></span>기록되지 않은 것은 일어나지 않은 것이나 마찬가지이다.<span class="quote-mark-r ion-quote"></span></br>- Adeline Virginia Stephen Woolf
+                        </div>
+                    </div><!-- col left end -->
+                    <!-- divider start -->
+                    <div class="divider-post"></div><!-- divider end -->
+                    <!-- col right start -->
+                    <div class="col-md-8">
+                        <h3 class="section-all-subtitle-second">
+                            브랜드의 소리를 전달하다, 고막프로덕션
+                        </h3>
+                        <p>
+                            수 많은 브랜드가 온-오프라인 브랜드 캠페인을 진행합니다</br>
+                            캠페인에서 만들어진 브랜드의 소리는 기록되지 않으면</br>
+                            캠페인이 종료되는 순간 사라집니다.
+                        </p>
+                        <p>
+                            고막프로덕션은 온-오프라인 브랜드 캠페인의 축적된</br>  
+                            노하우를 바탕으로 캠페인을 위한 최고의 영상컨텐츠를 제작합니다.</br><a class="section-links"
+                            data-scroll-to="works" href="#">프로젝트 더 알아보기</a>.
+                        </p>
+                    </div><!-- col right end -->
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row alt">
+                    <!-- col left start -->
+                    <div class="col-md-6">
+                        <!-- skills bar start -->
+                        <h3>
+                            The know-how
+                        </h3>
+                        <div class="show-skillbar">
+                            <!-- skill 1 start -->
+                            <div class="skillbar" data-percent="95">
+                                <span class="skillbar-title">영상기획</span>
+                                <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                            </div><!-- skill 1 end -->
+                            <!-- skill 2 start -->
+                            <div class="skillbar" data-percent="90">
+                                <span class="skillbar-title">촬영</span>
+                                <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                            </div><!-- skill 2 end -->
+                        </div><!-- skills bar end -->
+                    </div><!-- col left end -->
+                    <!-- divider start -->
+                    <div class="divider-post"></div><!-- divider end -->
+                    <!-- col right start -->
+                    <div class="col-md-6">
+                        <!-- skills bar start -->
+                        <!-- divider start -->
+                        <div class="divider-skillbar"></div><!-- divider end -->
+                        <div class="show-skillbar">
+                            <!-- skill 3 start -->
+                            <div class="skillbar" data-percent="85">
+                                <span class="skillbar-title">편집</span>
+                                <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                            </div><!-- skill 3 end -->
+                            <!-- skill 4 start -->
+                            <div class="skillbar" data-percent="76">
+                                <span class="skillbar-title">디지털채널링</span>
+                                <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                            </div><!-- skill 4 end -->
+                        </div><!-- skills bar end -->
+                    </div><!-- col right end -->
+                </div><!-- row end -->
+
+                <!-- row start -->
+                <div class="row" style="margin-top: 100px;">
+                    <!-- col left start -->
+                    <div class="col-md-6 services-hover">
+                        <div class="service-number services-img">
+                            1
+                        </div>
+                        <h3 class="services-title">
+                            The Planning Section
+                        </h3>
+                        <div class="services-description">
+                            크리에이티브 디렉터, 프로젝트 기획자, 촬영감독의 치열한 회의로</br>
+                            브랜드와 캠페인에 최적화된 영상 콘티가 탄생합니다.
+                        </div>
+                    </div><!-- col left end -->
+                    <!-- col right start -->
+                    <div class="col-md-6 services-hover services-move-down">
+                        <div class="service-number services-img">
+                            2
+                        </div>
+                        <h3 class="services-title">
+                            The Production Section
+                        </h3>
+                        <div class="services-description">
+                            풍부한 노하우를 가진 PD님들의 디렉팅을 통해 </br>
+                            프로젝트를 위한 인력 및 장비가 세팅됩니다.
+                        </div>
+                    </div><!-- col right end -->
+                    <!-- col left start -->
+                    <div class="col-md-6 services-hover">
+                        <div class="service-number services-img">
+                            3
+                        </div>
+                        <h3 class="services-title">
+                            The Post Production Section
+                        </h3>
+                        <div class="services-description">
+                            촬영된 내용은 편집, 2D-3D 아트편집, 모션그래픽, 음향편집을 통해</br>
+                            캠페인을 홍보하기 위한 최적의 컨텐츠로 탄생합니다.
+                        </div>
+                    </div><!-- col left end -->
+                    <!-- col right start -->
+                    <div class="col-md-6 services-hover services-move-down">
+                        <div class="service-number services-img">
+                            4
+                        </div>
+                        <h3 class="services-title">
+                            Digital Channeling
+                        </h3>
+                        <div class="services-description services-description-last">
+                            브랜드에서 소유한 채널에 영상을 업로드 하거나 </br>
+                            우리가 제안하는 최적의 디지털 채널믹스에 광고 집행 할 수 있습니다.
+                        </div>
+                    </div><!-- col right end -->
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div><!-- about page end -->
+        <div class="section section-testimonials light-logo" id="testimonials">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row section">
+                    <div class="testimonials-carousel owl-carousel">
+                        <!-- testimonials quote 1 start -->
+                        <div class="testimonials-quote">
+                            <div class="testimonials-quote-img">
+                                <img alt="Testimonials image" class="testimonials-quote-img" src="/assets/gomakproduction/testimonials/testimonials-quote-img-1.jpg">
+                            </div>
+                            <p>
+                                <span class="section-testimonials quote-mark-l ion-quote"></span>영상 콘티를 제안해주시고, 제작하는 과정에서 우리 브랜드에 대해 공부를 많이했다는 것을 느꼈어요.<span class="section-testimonials quote-mark-r ion-quote"></span></br>재미도 중요하지만 영상 퀄리티가 좋아서 내부 직원 모두 만족스러워했어요.
+                            </p>
+                            <div class="testimonials-signature">
+                                S**** 담당자
+                            </div>
+                        </div><!-- testimonials quote 1 end -->
+                        <!-- testimonials quote 2 start -->
+                        <div class="testimonials-quote">
+                            <div class="testimonials-quote-img">
+                                <img alt="Testimonials image" class="testimonials-quote-img" src="/assets/gomakproduction/testimonials/testimonials-quote-img-2.jpg">
+                            </div>
+                            <p>
+                                <span class="section-testimonials quote-mark-l ion-quote"></span>젊은 층을 타겟으로 한 제품 영상을 제작해야 했어요.<span class="section-testimonials quote-mark-r ion-quote"></span></br>젊고 크리에이티브한 친구들이 많아 기획 회의부터 제작까지 너무 즐겁게 일할 수 있었습니다.
+                            </p>
+                            <div class="testimonials-signature">
+                                젠니혼주류 담당자
+                            </div>
+                        </div><!-- testimonials quote 2 end -->
+                    </div>
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div><!-- testimonials page end -->
+        <!-- contact page start -->
+        <div class="section section-contact" id="contact">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row alt">
+                    <h2 class="section-title">
+                        Contact
+                    </h2>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <div class="section-all-subtitle" style="font-style: normal">
+                        <span class="section-all-subtitle-first">마케팅 성과를 극대화 시켜줄 영상제작!</span><br>
+                        고막프로덕션과 함께라면 가능합니다.
+                    </div>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                    <div class="footer-contact-block">
+                        <!-- col left start -->
+                        <div class="col-md-4">
+                            <!-- contact details start -->
+                            <span class="footer-contact-block-label">Address:</span> 서울특별시 광진구 군자동 면목로 39, 1층 <!-- contact details end -->
+                        </div><!-- col left end -->
+                        <!-- divider start -->
+                        <div class="divider-post-contact"></div><!-- divider end -->
+                        <!-- col center start -->
+                        <div class="col-md-4">
+                            <!-- contact details start -->
+                            <span class="footer-contact-block-label">Tel:</span> [02] 1522 - 9406 <!-- contact details end -->
+                        </div><!-- col center end -->
+                        <!-- divider start -->
+                        <div class="divider-post-contact"></div><!-- divider end -->
+                        <!-- col right start -->
+                        <div class="col-md-4">
+                            <!-- contact details start -->
+                            <span class="footer-contact-block-label">Email:</span> <a class="email" href="mailto:support@gomakculture.com" style="font-size:1.1em;">support@gomakculture.com</a> 
+                            <!-- contact details end -->
+                        </div><!-- col right end -->
+                    </div>
+                </div><!-- row end -->
+                <!-- row start -->
+                <div class="row">
+                        <div id="contact-form">
+                            <div class="col-md-12" style="margin-bottom: 50px;">
+                                <span class="footer-contact-block-label">프로젝트문의</span>
+                            </div>
+                        <form action="contact.php" id="form" method="post" name="send">
+
+                            <div class="col-md-4">
+                                <input class="requiredField name" id="name" name="name" placeholder="이름" type="text">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="requiredField email" id="email" name="email" placeholder="이메일주소" type="text">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="requiredField subject" id="subject" name="subject" placeholder="주제" type="text">
+                            </div>
+                            <div class="make-space">
+                                <textarea class="requiredField message" id="message" name="message" placeholder="영상제작의 목적, 컨셉을 간단하게 적어주세요"></textarea>
+                            </div>
+                            <div>
+                                <button class="c-btn fullwidth" id="submit" type="submit"><span>문의남기기</span></button>
+                            </div>
+                        </form>
+                    </div><!-- contact form end -->
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div><!-- contact page end -->
+        <!-- google maps page start -->
+        <div class="section section-google-maps">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row">
+                    <!-- google maps start -->
+                        <div id="map-wrapper">
+                            <div id="map">
+                            </div>
+                        </div><!-- google maps end -->
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div><!-- google maps page end -->
+        <!-- footer page start -->
+        <div class="section-footer">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row">
+                    <div class="section-content">
+                        <!-- logo footer start -->
+                        <!-- <div class="footer-logo scrollToTop"></div> -->
+                        <!-- social icons footer start -->
+                        <div class="social-icons-footer-wrapper" style="margin-top: 100px;">
+                            <ul class="social-icons-footer">
+                                <li class="social-icon" style="margin-right: 30px;">
+                                    <a class="ion-social-facebook" href="#" style="font-size: 50px;" target="_blank"></a>
+                                </li>
+                                <li class="social-icon" style="margin-right: 30px;">
+                                    <a class="ion-social-instagram" href="https://www.instagram.com/gomakproduction/" style="font-size: 50px;" target="_blank"></a>
+                                </li>
+                                <li class="social-icon" style="margin-right: 30px;">
+                                    <a class="ion-social-youtube" href="https://www.youtube.com/channel/UCv3M_u48L4jCo_tUys-n0yA?view_as=subscriber" target="_blank" style="font-size: 50px;"></a>
+                                </li>
+                                <li class="social-icon">
+                                    <a class="ion-social-vimeo" href="#" style="font-size: 50px;" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div><!-- social icons footer end -->
+                        <!-- footer newsletter form start -->
+                        <!-- <div id="subscribe-wrapper">
+                            <h2>
+                                Newsletter sign up
+                            </h2>
+                            <div id="newsletter">
+                                <div class="newsletter">
+                                    <form action="subscribe.php" id="subscribe" method="post" name="subscribe">
+                                        <input class="subscribe-requiredField subscribe-email" id="subscribe-email" name="subscribe-email" placeholder="Email" type="text"> <button class=
+                                        "c-btn fullwidth subscribe-me" id="submit-2" type="submit"><span>Subscribe</span></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> --><!-- footer newsletter form end -->
+                        <div class="lineOT-footer"></div>
+                        <div class="copy" style="text-transform:none">
+                            (주)고막컬쳐 | 서울시 광진구 군자동 467-18 1층 <br/>
+                            E-mail : Support@gomakculture.com | T. 02-1522-9406 </br>
+                            GOMAK PRODUCTION &copy;2018 All Rights Reserved
+                        </div><!-- copyrights end -->
+                    </div>
+                </div><!-- row end -->
+            </div><!-- container end -->
+        </div><!-- footer page end -->
+        <!-- to top arrow start -->
+        <a data-scroll-to="home" href="#">
+        <div class="to-top-arrow">
+            <span class="ion-ios-arrow-up"></span>
+        </div></a><!-- to top arrow end -->
+    </div><!-- page wrapper end -->
+    <!-- photoSwipe background start -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- photoSwipe background end -->
+<!-- scripts start -->
+<% content_for :javascript do %>
+  <script src="/assets/gomakproduction/gmap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
+  <script type="text/javascript">
+    $(function() {
+        var $window = $(window),
+            image = $('.parallax-window').data('image-src');
+
+        if ($window.width() < 750) {
+            $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
+
+        } else if ($window.width() > 750) {
+            $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
+        }
+          
+    });
+  </script>
+  <!-- <script src="/assets/jquery.gray.min.js"></script> -->
+        }
+<% end %>

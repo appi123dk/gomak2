@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>고막프로덕션</title>
+    <meta name="description" content="현장 스케치, SNS 바이럴 영상 제작 전문 업체">
+    <meta name="naver-site-verification" content="2f9357f57fb5d3f171379367ec316770e5b00dbd"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="GOMAKCULTURE"/>
+    <meta property="og:description" content="현장 스케치, SNS 바이럴 영상 제작 전문 업체"/>
+    <meta property="og:image:width" content="640" /> 
+    <meta property="og:image:height" content="442" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Include style per-controller - vendor plugins -->
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+    <link href=
+    "http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,700%7CDosis:200,300,400,500,600,700,800%7CRoboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+    rel="stylesheet" type="text/css"><!-- google fonts end -->
+
+    <%= csrf_meta_tags %>
+    <!-- <script src="/assets/gomakculture/vendor/modernizr-2.8.3.min.js"></script> -->
+
+
+</head>
+<body id="home">
+
+<!-- ========== Preloader ========== -->
+<div id="preloader">
+    <div id="preloader-status">
+        <div class="preloader-position loader">
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<!-- Main view  -->
+<%= yield %>
+
+    <!-- Include javascript per-controller - vendor plugins -->
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+
+    <!-- Include javascript per-view -->
+    <!-- Contact Us 에서 사용 -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoVnBxMZAlFPkaPI2xIX9mr5wbZxZmGco" type="text/javascript"></script>  -->
+
+    <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
+    <%= yield :javascript %>
+
+</body>
+</html>
