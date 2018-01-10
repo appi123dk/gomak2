@@ -513,17 +513,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
   <script type="text/javascript">
     $(function() {
-        var $window = $(window),
+        var $window = $(window).width(),
             image = $('.parallax-window').data('image-src');
 
-        window.onload = function(){
-          if ($window.width() < 750) {
-            $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
+        // if ($window < 750) {
+        //   $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
 
-          } else if ($window.width() > 750) {
-              $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
-          }
-        };
+        // } else if ($window > 750) {
+        //     $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
+        // }
     });
   </script>
   <!-- <script src="/assets/jquery.gray.min.js"></script> -->
