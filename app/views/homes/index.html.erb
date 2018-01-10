@@ -67,7 +67,7 @@
         <!-- hero bg start -->
         <div class="hero-fullscreen">
             <!-- single image start -->
-            <div class="parallax-window" data-image-src="/assets/gomakproduction/main_small_banner.jpg" data-parallax="scroll"></div><!-- single image end -->
+            <div class="parallax-window" data-image-src="/assets/gomakproduction/main_banner.jpg" data-parallax="scroll"></div><!-- single image end -->
         </div><!-- hero bg end -->
         <!-- home page overlay start -->
             <!-- <div class="home-page-overlay"></div> -->
@@ -516,14 +516,15 @@
         var $window = $(window).width(),
             image = $('.parallax-window').data('image-src');
 
-        // if ($window < 750) {
-        //   $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
+        if ($window < 750) {
+          $('.parallax-window').data('image-src','/assets/gomakproduction/main_small_banner.jpg');
+          $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
 
-        // } else if ($window > 750) {
-        //     $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
-        // }
+
+        } else if ($window > 750) {
+            $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
+            $('.parallax-slider').attr('src','/assets/gomakproduction/main_banner.jpg');
+        }
     });
   </script>
-  <!-- <script src="/assets/jquery.gray.min.js"></script> -->
-        }
 <% end %>
