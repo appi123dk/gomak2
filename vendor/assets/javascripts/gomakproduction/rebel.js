@@ -217,7 +217,7 @@ $(function() {
             var r = $(this).serialize();
             $.post($(this).attr("action"), r, function() {
                 $("form#form").slideUp("fast", function() {
-                    $(this).before('<div class="success">Your email was sent successfully.</div>');
+                    $(this).before('<div class="success">문의 남겨주셔서 감사합니다 :) </br>정상적으로 접수되었습니다.</div>');
                 });
             });
         }

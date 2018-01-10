@@ -367,19 +367,19 @@
                             <div class="col-md-12" style="margin-bottom: 50px;">
                                 <span class="footer-contact-block-label">프로젝트문의</span>
                             </div>
-                        <form action="contact.php" id="form" method="post" name="send">
+                        <form action="/questions/create" id="form" method="post">
 
                             <div class="col-md-4">
-                                <input class="requiredField name" id="name" name="name" placeholder="이름" type="text">
+                                <input class="requiredField name" id="name" name="username" placeholder="이름" type="text">
                             </div>
                             <div class="col-md-4">
                                 <input class="requiredField email" id="email" name="email" placeholder="이메일주소" type="text">
                             </div>
                             <div class="col-md-4">
-                                <input class="requiredField subject" id="subject" name="subject" placeholder="주제" type="text">
+                                <input class="requiredField subject" id="subject" name="phone" placeholder="연락처 (숫자 11자리)" type="text">
                             </div>
                             <div class="make-space">
-                                <textarea class="requiredField message" id="message" name="message" placeholder="영상제작의 목적, 컨셉을 간단하게 적어주세요"></textarea>
+                                <textarea class="requiredField message" id="message" name="contents" placeholder="영상제작의 목적, 컨셉을 간단하게 적어주세요"></textarea>
                             </div>
                             <div>
                                 <button class="c-btn fullwidth" id="submit" type="submit"><span>문의남기기</span></button>
@@ -501,8 +501,7 @@
        "url": "http://gomakproduction.com",
        "sameAs": [
          "https://www.youtube.com/channel/UCv3M_u48L4jCo_tUys-n0yA?",
-         "http://blog.naver.com/myblog",
-         "http://storefarm.naver.com/mystore",
+         "https://www.instagram.com/gomakproduction/",
        ]
       }
     </script>
@@ -522,6 +521,7 @@
             $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
             $('.parallax-slider').attr('src','/assets/gomakproduction/main_banner.jpg');
         }
+
     });
   </script>
 <% end %>

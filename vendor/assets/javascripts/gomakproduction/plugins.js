@@ -6,7 +6,7 @@
   parallax.js v1.4.2
   PhotoSwipe v4.1.1
     PhotoSwipe Default UI v4.1.1
-	PhotoSwipe Init
+  PhotoSwipe Init
   jquery.countTo
     jquery.appear
   YoutubeBackground v1.0.5
@@ -125,11 +125,11 @@ jQuery(function(e){e("body").html(),!0,e("#menu-mobile-caller").on("click",funct
 
 
 /*
-* @name		    Shuffle Letters
-* @author		Martin Angelov
-* @version 	    1.1
-* @url			http://tutorialzine.com/2011/09/shuffle-letters-effect-jquery/
-* @license		MIT License
+* @name       Shuffle Letters
+* @author   Martin Angelov
+* @version      1.1
+* @url      http://tutorialzine.com/2011/09/shuffle-letters-effect-jquery/
+* @license    MIT License
 */
 !function(t){function e(t,e){var e=e||"";if(!e.length){var r={lowerLetter:"abcdefghijklmnopqrstuvwxyz0123456789",upperLetter:"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",symbol:",.?/\\(^)![]{}*&^%$#'\"",numeric:"0123456789",all:function(){return lowerLetter+upperLetter+symbol+numeric}};e="lowerLetter"==t?r.lowerLetter:"upperLetter"==t?r.upperLetter:"symbol"==t?r.symbol:"numeric"==t?r.numeric:polls.all()}var n=e.split("");return n[Math.floor(Math.random()*n.length)]}t.fn.shuffleLetters=function(r){var n=t.extend({step:8,fps:25,text:"",pool:"",callback:function(){}},r);return this.each(function(){var r=t(this),a="";if(r.data("animated"))return!0;r.data("animated",!0),a=n.text?n.text.split(""):r.text().split("");for(var l=[],o=[],i=0;i<a.length;i++){var u=a[i];" "!=u?(l[i]=/[a-z]/.test(u)?"lowerLetter":/[A-Z]/.test(u)?"upperLetter":"numeric",o.push(i)):l[i]="space"}r.html(""),function p(t){var i,u=o.length,s=a.slice(0);if(t>u)return r.data("animated",!1),void n.callback(r);for(i=Math.max(t,0);u>i;i++)s[o[i]]=i<t+n.step?e(l[o[i]],n.pool):"";r.text(s.join("")),setTimeout(function(){p(t+1)},1e3/n.fps)}(-n.step)})}}(jQuery);
 

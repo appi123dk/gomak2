@@ -43,6 +43,12 @@
                     <li class="<%= is_active_action('new') %>"><%= link_to "프로젝트 생성", projects_new_path %></li>
                 </ul>
             </li>
+            <li class="<%= is_active_controller('questions') %>">
+                <a href="#"><i class="fa fa-comments"></i> <span class="nav-label" data-i18n="nav.questions">문의내역</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse <%= is_active_controller('questions', 'in') %>">
+                    <li class="<%= is_active_action('index') %>"><%= link_to "문의내역", questions_index_path %></li>
+                </ul>
+            </li>
 
     </div>
 </nav>

@@ -6,6 +6,11 @@ Myapp::Application.routes.draw do
   # Gomakproduction
   get "homes/index"
 
+  # 프로젝트의뢰
+  get "questions/index"
+  post "questions/create"
+  get "questions/responses/:id", to: 'questions#responses'
+
   # Project Managing
   get "projects/index"
   get "projects/new"
