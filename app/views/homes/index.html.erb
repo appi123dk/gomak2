@@ -496,6 +496,19 @@
     </div><!-- photoSwipe background end -->
 <!-- scripts start -->
 <% content_for :javascript do %>
+    <script type="application/ld+json">
+      {
+       "@context": "http://schema.org",
+       "@type": "Person",
+       "name": "GOMAK PRODUCTION",
+       "url": "http://gomakproduction.com",
+       "sameAs": [
+         "https://www.youtube.com/channel/UCv3M_u48L4jCo_tUys-n0yA?",
+         "http://blog.naver.com/myblog",
+         "http://storefarm.naver.com/mystore",
+       ]
+      }
+    </script>
   <script src="/assets/gomakproduction/gmap.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
   <script type="text/javascript">
@@ -503,13 +516,14 @@
         var $window = $(window),
             image = $('.parallax-window').data('image-src');
 
-        if ($window.width() < 750) {
+        window.onload = function(){
+          if ($window.width() < 750) {
             $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
 
-        } else if ($window.width() > 750) {
-            $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
-        }
-          
+          } else if ($window.width() > 750) {
+              $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
+          }
+        };
     });
   </script>
   <!-- <script src="/assets/jquery.gray.min.js"></script> -->
