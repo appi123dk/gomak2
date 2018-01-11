@@ -509,13 +509,20 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
   <script type="text/javascript">
     $(function() {
+        $(".ion-ios-play").click(function(){
+          ga('send','event','영상시청','클릭');
+        });
+
+        $(".c-btn").click(function(){
+          ga('send','event','문의하기','클릭');
+        });
+        
         var $window = $(window).width(),
             image = $('.parallax-window').data('image-src');
 
         if ($window < 750) {
           $('.parallax-window').data('image-src','/assets/gomakproduction/main_small_banner.jpg');
           $('.parallax-slider').attr('src','/assets/gomakproduction/main_small_banner.jpg');
-
 
         } else if ($window > 750) {
             $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
