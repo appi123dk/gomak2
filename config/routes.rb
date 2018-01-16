@@ -10,6 +10,7 @@ Myapp::Application.routes.draw do
   get "questions/index"
   post "questions/create"
   get "questions/responses/:id", to: 'questions#responses'
+  get "questions/spam_delete/:id", to: 'questions#spam_delete'
 
   # Project Managing
   get "projects/index"

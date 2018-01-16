@@ -26,8 +26,15 @@ class QuestionsController < ApplicationController
 		question.save
 
 	
-		@mail = NoticeMailer.sendmail_inquire(username, email, contents).deliver_now
+		# @mail = NoticeMailer.sendmail_inquire(username, email, contents).deliver_now
 
 		redirect_to '/homes/index'
+	end
+
+	def spam_delete
+		question = Question.find(params[:id])
+		question.destroy
+
+		redirect_to '/questions/index'
 	end
 end
