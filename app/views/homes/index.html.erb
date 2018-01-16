@@ -127,7 +127,7 @@
                                 <h1 style="margin-bottom: 0px;"><%= project.project_name %></h1>
                                 <h2 style="color:#fff; text-align: left; margin-bottom: 20px; font-weight:bold"><%= project.brand_name %></h2>
                                 <!-- <a class="iw-slide-right" style="float:left" href="#">자세히보기</a> -->
-                                <a class="ion-ios-play" style="float:left" data-lity="" href="<%= project.video_url %>"> 재생</a>
+                                <a class="ion-ios-play" style="float:left" onclick="ga('send','event','video','play')" data-lity="" href="<%= project.video_url %>"> 재생</a>
                             </div>
                         </figcaption>
                     </figure><!-- gallery item 1 end -->
@@ -382,7 +382,7 @@
                                 <textarea class="requiredField message" id="message" name="contents" placeholder="영상제작의 목적, 컨셉을 간단하게 적어주세요"></textarea>
                             </div>
                             <div>
-                                <button class="c-btn fullwidth" id="submit" type="submit"><span>문의남기기</span></button>
+                                <button class="c-btn fullwidth" onclick="ga('send','event','inquire','click')" id="submit" type="submit"><span>문의남기기</span></button>
                             </div>
                         </form>
                     </div><!-- contact form end -->
@@ -509,13 +509,13 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
   <script type="text/javascript">
     $(function() {
-        $(".ion-ios-play").click(function(){
-          ga('send','event','영상시청','클릭');
-        });
+        // $(".ion-ios-play").click(function(){
+        //   ga('send','event','영상시청','클릭');
+        // });
 
-        $(".c-btn").click(function(){
-          ga('send','event','문의하기','클릭');
-        });
+        // $(".c-btn").click(function(){
+        //   ga('send','event','문의하기','클릭');
+        // });
         
         var $window = $(window).width(),
             image = $('.parallax-window').data('image-src');
