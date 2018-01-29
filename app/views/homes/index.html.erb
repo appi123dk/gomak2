@@ -1,4 +1,4 @@
-<a class="logo logo-light scrollToTop">
+<a class="logo logo-dark scrollToTop">
     <div class="logo-img"></div></a><!-- logo end -->
     <!-- navigation button start -->
     <button class="navigation-toggle" data-navigation-toggle="toggle"><span class="navigation-toggle-icon"><span class="navigation-toggle-bars navigation-toggle-bars-light"></span> <span class=
@@ -63,39 +63,53 @@
         </div><!-- center container end -->
     </nav><!-- navigation end -->
     <!-- home page start -->
-    <div class="home-page light-logo">
-        <!-- hero bg start -->
 
+     
+
+    <!-- <div class="home-page dark-logo"> -->
+    <div class="dark-logo" style="background-image: url('/assets/gomakculture/banner_background.png');" >
+        <!-- hero bg start -->
+    <div id="wowslider-container1" style="margin-top: 85px;">
+      <div class="ws_images">
+        <ul>
+          <li>
+            <a href="/recruits/index"><img src="/assets/gomakculture/banner_0.png" alt="swipe 스와이프" title="swipe" id="wows1_1"/></a>
+          </li>
+          <li>
+            <a href="/homes/single_portfolio/61"><img src="/assets/gomakculture/banner_1.png" alt="about 고막프로덕션 gomakproduction" title="gomakproduction"  id="wows1_3"/></a>
+          </li>
+          <!-- <li>
+            <a href="/homes/single_portfolio/55"><img src="/assets/gomakculture/banner_3.png" alt="현대해상" title="lost_gallery" id="wows1_4"/></a>
+          </li>
+          <li>
+            <a href="/homes/single_portfolio/57"><img src="/assets/gomakculture/banner_4.png" alt="DOTD 호세쿠엘보" title="dotd" id="wows1_5"/></a>
+          </li>
+          <li>
+            <a href="/homes/single_portfolio/38"><img src="/assets/gomakculture/banner_5.png" alt="슈팅워터펀" title="everland" id="wows1_6"/></a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="ws_bullets">
+        <div>
+          <a href="#" title="swipe"><span>1</span></a>
+          <a href="#" title="gomakproduction"><span>2</span></a>
+        </div>
+      </div>
+      <div class="ws_shadow"></div>
+    </div> 
         <!-- <div class="hero-fullscreen">
             <div class="parallax-window" data-image-src="/assets/gomakproduction/main_banner.jpg" data-parallax="scroll"></div>
         </div> -->
-        <!-- center container start -->
-        <div class="center-container">
-            <!-- center block start -->
-            <!-- <div class="center-block">
-                <h1 class="home-page-title">Rebel!</h1>
-                <div class="home-page-subtitle-carousel owl-carousel">
-                    <h2 class="home-page-title">
-                        <a data-scroll-to="about" href="#">Simplicity is complex</a>
-                    </h2>
-                    <h2 class="home-page-title">
-                        <a data-scroll-to="about" href="#">Design is a process</a>
-                    </h2>
-                    <h2 class="home-page-title">
-                        <a data-scroll-to="about" href="#">Aesthetic is a decision</a>
-                    </h2>
-                    <h2 class="home-page-title">
-                        <a data-scroll-to="about" href="#">Style is everything</a>
-                    </h2>
-                </div>
-            </div> --><!-- center block end -->
-        </div><!-- center container end -->
+
+        <!-- <div class="center-container">
+        </div> -->
+
     </div><!-- home page end -->
     <!-- page wrapper start -->
     <div class="page-wrapper">
         
         <!-- works page start -->
-        <div class="section section-works" id="works">
+        <div class="section section-works dark-logo" id="works" style="padding-top: 100px;">
             <!-- container start -->
             <div class="container">
                 <!-- row start -->
@@ -142,7 +156,7 @@
         </div><!-- works page end -->
 
         <!-- about page start -->
-        <div class="section section-about" id="about">
+        <div class="section section-about dark-logo" id="about">
             <!-- container start -->
             <div class="container">
                 <!-- row start -->
@@ -363,10 +377,10 @@
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                        <div id="contact-form">
-                            <div class="col-md-12" style="margin-bottom: 50px;">
-                                <span class="footer-contact-block-label">프로젝트문의</span>
-                            </div>
+                    <div id="contact-form">
+                        <div class="col-md-12" style="margin-bottom: 50px;">
+                            <span class="footer-contact-block-label">프로젝트문의</span>
+                        </div>
                         <form action="/questions/create" id="form" method="post">
 
                             <div class="col-md-4">
@@ -506,7 +520,9 @@
       }
     </script>
   <script src="/assets/gomakproduction/gmap.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script>
+  <script src="/assets/gomakculture/wowslider.js"></script>
+  <script src="/assets/gomakculture/script.js"></script>
   <script type="text/javascript">
     $(function() {
         // $(".ion-ios-play").click(function(){
