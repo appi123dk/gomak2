@@ -35,4 +35,10 @@ class ProjectsController < ApplicationController
 		redirect_to '/projects/index'
 	end
 
+	def delete
+		project = Project.find(params[:id])
+		project.destroy
+		redirect_to '/projects/index'
+	end
+
 end

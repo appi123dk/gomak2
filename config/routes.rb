@@ -18,6 +18,7 @@ Myapp::Application.routes.draw do
   get "projects/create"
   get "projects/edit/:id", to: 'projects#edit'
   get "projects/update/:id", to: 'projects#update'
+  get "projects/delete/:id", to: 'projects#delete'
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"
