@@ -6,6 +6,10 @@ Myapp::Application.routes.draw do
   # Gomakproduction
   get "homes/index"
 
+    # 마이크로사이트
+  get "microsites/jose_cuervo"
+  get "microsites/jose_cuervo_result"
+
   # 프로젝트의뢰
   get "questions/index"
   post "questions/create"

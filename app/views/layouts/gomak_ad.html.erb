@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jose Cuervo - Capture the moments</title>
+    <meta name="description" content="호세쿠엘보 x UMF 이벤트 페이지">
+    <!-- <meta name="naver-site-verification" content="2f9357f57fb5d3f171379367ec316770e5b00dbd"/> -->
+    <!-- <link rel="canonical" href="<%= request.original_url %>"> -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="호세쿠엘보 - 순간을 잡아라"/>
+    <meta property="og:description" content="영혼이 탄생하는 순간을 포착하라!"/>
+    <meta property="og:image" content="/assets/microsites/share_img-min.jpeg" /> 
+    <meta property="og:image:width" content="640" /> 
+    <meta property="og:image:height" content="442" />
+    <meta property="og:url" content="<%= request.original_url %>"/>
+    <meta name="robots" content="index, follow">
+
+    <!-- Include style per-controller - vendor plugins -->
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+    <%= csrf_meta_tags %>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65867462-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-65867462-4');
+    </script>
+
+
+</head>
+<body style="background-color:black;">
+
+<!-- ========== Preloader ========== -->
+
+<!-- <div class="preloader">
+  <img src="/assets/gomakculture/loader.svg" alt="Loading...">
+</div> -->
+
+<!-- Main view  -->
+<%= yield %>
+    <!-- Include javascript per-controller - vendor plugins -->
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+
+    <!-- Include javascript per-view -->
+    
+    <!-- Contact Us 에서 사용 -->
+    
+
+    <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
+    <%= yield :javascript %>
+
+</body>
+</html>
