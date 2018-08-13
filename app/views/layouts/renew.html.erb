@@ -19,6 +19,7 @@
     <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill|Indie+Flower|Nanum+Gothic|Permanent+Marker|Ruslan+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 
     <%= csrf_meta_tags %>
 
@@ -47,13 +48,13 @@
                     <nav id="primary-menu">
 
                         <ul>
-                            <li class="current nav-home"><a href="/mains/index"><div>Home</div></a>
+                            <li class="current nav-home"><a href="/mains/index"><div class="main-font">Home</div></a>
                             </li>
-                            <li class="nav-about"><a href="/mains/about"><div>about us</div></a>
+                            <li class="nav-about"><a href="/mains/about"><div class="main-font">about us</div></a>
                             </li>
-                            <li class="nav-works"><a href="/mains/projects"><div>works</div></a>
+                            <li class="nav-works"><a href="/mains/projects"><div class="main-font">works</div></a>
                             </li>
-                            <li class="nav-contacts"><a href="/mains/contacts"><div>contacts</div></a>
+                            <li class="nav-contacts"><a href="/mains/contacts"><div class="main-font">contacts</div></a>
                             </li>
                         </ul>
 

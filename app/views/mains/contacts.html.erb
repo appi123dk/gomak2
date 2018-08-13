@@ -5,11 +5,11 @@
 			<div class="content-wrap">
 
 				<div class="container clearfix">
-					<h1 class="special-font">CONTACTS</h1>
+					<h1 class="special-font main-font">CONTACTS</h1>
 					<hr/>
 					<div id="map-canvas" class="gmap map-boxed" style="height:391px;"></div>
 					<div class="col_half fancy-title title-bottom-border" style="padding-top: 50px;">
-						<h4>ADDRESS</h4>
+						<h4 class="main-font">ADDRESS</h4>
 
 						<p style="margin-bottom: 10px; margin-top: 30px; font-weight:bold">도로명주소</p>
 						<p>
@@ -18,7 +18,7 @@
 						</p>		
 					</div>
 					<div class="col_half col_last fancy-title title-bottom-border" style="padding-top: 50px;">
-						<h4>CONTACT</h4>
+						<h4 class="main-font">CONTACT</h4>
 
 						<p style="margin-bottom: 10px; margin-top: 30px; ">
 							<span style="font-weight:bold">대표전화 | </span> 02-1522-9406<br/>
@@ -41,28 +41,8 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQG2W6JZELRj15m55EiIugXM5i8az7ao"></script>
   <script type="text/javascript">
     $(function() {
-        // $(".ion-ios-play").click(function(){
-        //   ga('send','event','영상시청','클릭');
-        // });
-
-        // $(".c-btn").click(function(){
-        //   ga('send','event','문의하기','클릭');
-        // });
-
-
-        
-        var $window = $(window).width();
-            // image = $('.parallax-window').data('image-src');
-
-        if ($window < 750) {
-          // $('.parallax-window').data('image-src','/assets/gomakproduction/main_small_banner.jpg');
-            $('.image').attr('src','/assets/contact_img_small.png');
-
-        } else if ($window > 750) {
-            // $('.parallax-window').data('image-src','/assets/gomakproduction/main_banner.jpg');
-            $('.iamge').attr('src','/assets/contact_img.png');
-        }
-
+       $(".current").removeClass("current");
+       $(".nav-contacts").addClass("current");
     });
   </script>
 

@@ -3,18 +3,11 @@
 }
 
 nav ul li a div{
-	font-family: 'Ruslan Display', cursive;
 	font-size: 15px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	/*font-family: 'Indie Flower', cursive;*/
 	/*font-family: 'Permanent Marker', cursive;*/
-}
-
-#portfolio-filter li a {
-	font-family: 'Ruslan Display', cursive;
-	/*font-family: 'Permanent Marker', cursive;	*/
-
 }
 
 body {
@@ -31,7 +24,6 @@ h6 {
 }
 
 .special-font {
-	font-family: 'Ruslan Display', cursive;
 	/*font-family: 'Permanent Marker', cursive;	*/
 	text-align: center;
 	margin-top: 30px;
@@ -61,5 +53,5 @@ hr {
 }
 
 .main-font {
-	font-family: 'Ruslan Display', cursive;
+	font-family: 'Luckiest Guy', cursive;
 }
