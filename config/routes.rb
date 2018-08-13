@@ -3,6 +3,13 @@ Myapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'homes#index'
 
+  # 사이트 리뉴얼 주소
+  get "mains/index"
+  get "mains/projects"
+  get "mains/about"
+  get "mains/contacts"
+  get "mains/project/:id", to: 'mains#project'
+
   # Gomakproduction
   get "homes/index"
 

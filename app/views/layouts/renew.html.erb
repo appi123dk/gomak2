@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>고막프로덕션</title>
+    <meta name="description" content="TVC광고, 디지털캠페인, 바이럴영상, 오프라인 스케치 영상제작 전문 프로덕션"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="GOMAK PRODUCTION"/>
+    <meta property="og:description" content="TVC광고, 디지털캠페인, 바이럴영상, 오프라인 스케치 영상제작 전문 프로덕션"/>
+    <meta property="og:image:width" content="640" /> 
+    <meta property="og:image:height" content="442" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Include style per-controller - vendor plugins -->
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill|Indie+Flower|Nanum+Gothic|Permanent+Marker|Ruslan+Display" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+
+
+</head>
+<body class="stretched">
+    <div id="wrapper" class="clearfix">
+<!-- Main view  -->
+        <header id="header" class="transparent-header" data-sticky-class="not-dark">
+
+            <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="index.html" class="standard-logo" data-dark-logo="/assets/renew/logo-dark.png"><img src="/assets/renew/logo-dark-mobile.png" alt="Canvas Logo"></a>
+                        <a href="index.html" class="retina-logo" data-dark-logo="/assets/renew/logo-dark@2x.png"><img src="/assets/renew/logo-dark-mobile.png" alt="Canvas Logo"></a>
+                    </div><!-- #logo end -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+
+                        <ul>
+                            <li class="current nav-home"><a href="/mains/index"><div>Home</div></a>
+                            </li>
+                            <li class="nav-about"><a href="/mains/about"><div>about us</div></a>
+                            </li>
+                            <li class="nav-works"><a href="/mains/projects"><div>works</div></a>
+                            </li>
+                            <li class="nav-contacts"><a href="/mains/contacts"><div>contacts</div></a>
+                            </li>
+                        </ul>
+
+                    </nav><!-- #primary-menu end -->
+
+                </div>
+
+            </div>
+
+        </header><!-- #header end -->
+
+<%= yield %>
+    
+<!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+
+            <div class="container">
+
+                <!-- Footer Widgets
+                ============================================= -->
+                <div class="footer-widgets-wrap clearfix">
+
+                        <div class="col_one_third">
+
+                            <div class="widget clearfix">
+
+                               <h4>ADDRESS</h4>
+                               <h3>서울특별시 강남구 역삼로 17길 10, 부강빌딩 1층</h3>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col_one_third">
+
+                            <div class="widget widget_links clearfix">
+
+                               <h4>TEL</h4>
+                               <h3>02-1522-9406</h3>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col_one_third col_last">
+
+                            <div class="widget widget_links clearfix">
+
+                               <h4>Mail</h4>
+                               <h3>support@gomakculture.com</h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col_one_third" style="margin-top: 30px;">
+                        <hr>
+                            <div class="row">
+
+                                <div class="col-lg-6 clearfix bottommargin-sm">
+                                    <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-facebook"></i>
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>페이스북</strong><br>Follow us</small></a>
+                                </div>
+                                <div class="col-lg-6 clearfix">
+                                    <a href="#" class="social-icon si-dark si-colored si-youtube nobottommargin" style="margin-right: 10px;">
+                                        <i class="icon-youtube"></i>
+                                        <i class="icon-youtube"></i>
+                                    </a>
+                                    <a href="#"><small style="display: block; margin-top: 3px;"><strong>유튜브 채널</strong><br>Subscribe</small></a>
+                                </div>
+
+                            </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2018 All Rights Reserved by GOMAK CULTURE<br>
+                    </div>
+
+                </div>
+
+            </div><!-- #copyrights end -->
+
+        </footer><!-- #footer end -->
+    </div>
+
+    <!-- Include javascript per-controller - vendor plugins -->
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+
+    <!-- Include javascript per-view -->
+    <!-- Contact Us 에서 사용 -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoVnBxMZAlFPkaPI2xIX9mr5wbZxZmGco" type="text/javascript"></script>  -->
+
+    <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
+    <%= yield :javascript %>
+    
+</body>
+</html>

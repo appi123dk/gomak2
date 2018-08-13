@@ -1,0 +1,65 @@
+#copyrights {
+	padding: 5px;
+}
+
+nav ul li a div{
+	font-family: 'Ruslan Display', cursive;
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/*font-family: 'Indie Flower', cursive;*/
+	/*font-family: 'Permanent Marker', cursive;*/
+}
+
+#portfolio-filter li a {
+	font-family: 'Ruslan Display', cursive;
+	/*font-family: 'Permanent Marker', cursive;	*/
+
+}
+
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.special-font {
+	font-family: 'Ruslan Display', cursive;
+	/*font-family: 'Permanent Marker', cursive;	*/
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+hr {
+	margin-bottom: 50px;
+}
+
+.project-name {
+	/*font-family: 'Permanent Marker', cursive;	*/
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+
+}
+
+.project-brand {
+	/*font-family: 'Ruslan Display', cursive;*/
+	/*font-family: 'Permanent Marker', cursive;	*/
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-weight:800;
+	color: #bb2021;
+}
+
+.main-font {
+	font-family: 'Ruslan Display', cursive;
+}
