@@ -7,7 +7,7 @@
 				<div class="container clearfix">
 					<h1 class="special-font main-font">CONTACTS</h1>
 					<hr/>
-					<div id="map-canvas" class="gmap map-boxed" style="width:100%; height:391px;"></div>
+					<div id="map" style="width:100%; height:391px;"></div>
 					<div class="col_half fancy-title title-bottom-border" style="padding-top: 50px;">
 						<h4 class="main-font">ADDRESS</h4>
 
@@ -37,16 +37,15 @@
 		</section><!-- #content end -->
 
 <% content_for :javascript do %>
+  <script src="/assets/gomakproduction/gmap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script>
   
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbVVurerqLkFTfhWtYg97Pl25SGVUvwrg" type="text/javascript"></script> -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQG2W6JZELRj15m55EiIugXM5i8az7ao"></script>
-  <script src="/assets/renew/gmap.js"></script>
   <script type="text/javascript">
     $(function() {
+        
        $(".current").removeClass("current");
        $(".nav-contacts").addClass("current");
+
     });
   </script>
-
-
 <% end %>
