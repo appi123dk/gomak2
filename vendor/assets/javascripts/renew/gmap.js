@@ -25,7 +25,7 @@ $(document).ready(function(){
 		  mapOptions);
 
 		// Map marker 
-		// var image = '/assets/gomakculture/map-pin.png';
+		var image = '/assets/gomakculture/map-pin.png';
 		var myLatLng = new google.maps.LatLng(37.495420, 127.036007);
 		var beachMarker = new google.maps.Marker({
 			position: myLatLng,
