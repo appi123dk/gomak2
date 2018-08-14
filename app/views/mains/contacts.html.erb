@@ -43,31 +43,36 @@
   
   
   <script type="text/javascript">
-
+	var marker;
   	window.initMap = function(){
       	var map,
       		gomak = {lat: 37.495420, lng: 127.036007};
 
         map = new google.maps.Map(document.getElementById('my-map'), {
           center: gomak,
-          zoom: 15
+          zoom: 15,
+          disableDefaultUI: true
         });
-        var marker = new google.maps.Marker({position: gomak, map: map});
+        marker = new google.maps.Marker({
+        	position: gomak, 
+        	map: map,
+        	animation: google.maps.Animation.DROP,
+        });
+        marker.addListener('click', toggleBounce)
+     }
+
+     function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
       }
-      
+
     $(function() {
       
-      // window.initMap = function(){
-      // 	var map,
-      // 		gomak = {lat: 37.495420, lng: 127.036007};
+      
 
-      //   map = new google.maps.Map(document.getElementById('my-map'), {
-      //     center: gomak,
-      //     zoom: 15
-      //   });
-      //   var marker = new google.maps.Marker({position: gomak, map: map});
-      // }
-        
        $(".current").removeClass("current");
        $(".nav-contacts").addClass("current");
 

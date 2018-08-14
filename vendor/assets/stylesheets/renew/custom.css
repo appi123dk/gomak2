@@ -63,3 +63,7 @@ hr {
 .kor-font {
 	font-family: 'Nanum Gothic', sans-serif; 
 }
+
+.gmnoprint img {
+    max-width: none; 
+}

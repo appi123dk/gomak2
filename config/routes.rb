@@ -1,7 +1,7 @@
 Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
-  root to: 'mains#index'
+  root to: 'homes#index'
 
   # 사이트 리뉴얼 주소
   get "mains/index"

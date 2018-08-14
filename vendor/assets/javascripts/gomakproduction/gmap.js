@@ -6,7 +6,7 @@
 
 $(document).ready(function(){
 
-  
+  var beachMarker;
   function initGMap() {
     'use strict';
 
@@ -14,6 +14,7 @@ $(document).ready(function(){
     // How zoomed in you want the map to start at (always required)
     zoom: 15,
     scrollwheel: false,
+    disableDefaultUI: true,
 
     // The latitude and longitude to center the map (always required)
     center: new google.maps.LatLng(37.495420, 127.036007), 
@@ -27,12 +28,22 @@ $(document).ready(function(){
     // Map marker 
     // var image = '/assets/gomakculture/map-pin.png';
     var myLatLng = new google.maps.LatLng(37.495420, 127.036007);
-    var beachMarker = new google.maps.Marker({
+    beachMarker = new google.maps.Marker({
       position: myLatLng,
       map: map,
+      animation: google.maps.Animation.DROP,
       // icon: image
     });
+    beachMarker.addListener('click', toggleBounce)
   } // initGMap
+
+  function toggleBounce() {
+      if (beachMarker.getAnimation() !== null) {
+        beachMarker.setAnimation(null);
+      } else {
+        beachMarker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
 
   google.maps.event.addDomListener(window, 'load', initGMap);
 
