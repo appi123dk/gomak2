@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110063039) do
+ActiveRecord::Schema.define(version: 20180824102146) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "project_name", limit: 255
     t.string   "brand_name",   limit: 255
     t.string   "video_url",    limit: 255
     t.string   "thumb_url",    limit: 255
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.integer  "order",        limit: 4,   default: 999
+    t.string   "client",       limit: 255
+    t.string   "media",        limit: 255
+    t.string   "director",     limit: 255
+    t.boolean  "is_main",                  default: false
   end
 
   create_table "questions", force: :cascade do |t|

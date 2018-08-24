@@ -1,13 +1,17 @@
 class MainsController < ApplicationController
 	def index
+		@projects = Project.where('is_main = ?', true)
 		render :layout => "renew"
 	end
 
 	def projects
+		@projects = Project.all
 		render :layout => "renew"
 	end
 
 	def project
+		@project = Project.find(params[:id])
+		@projects = Project.where.not(id: @project.id)
 		render :layout => "renew"
 	end
 

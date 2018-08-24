@@ -14,9 +14,18 @@
             <div class="form-group col-lg-8">
                 <input type="text" class="form-control" name="project_name" required="" style="text-align: right" value="<%= @project.project_name %>">
             </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px">클라이언트 : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="client" required="" style="text-align: right" value="<%= @project.client %>">
+            </div>
             <label class="col-lg-4 control-label" style="margin-top: 7px">브랜드명 : </label>
             <div class="form-group col-lg-8">
                 <input type="text" class="form-control" name="brand_name" required="" style="text-align: right" value="<%= @project.brand_name %>">
+            </div>
+            <label class="col-lg-4 control-label" style="margin-top: 7px">채널(Media) : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="media" required="" style="text-align: right" value="<%= @project.media %>">
+                <p class="text-right">FACEBOOK, INSTAGRAM, YOUTUBE, SMR, TV 등 입력</p>
             </div>
             <label class="col-lg-4 control-label" style="margin-top: 7px">영상 URL : </label>
             <div class="form-group col-lg-8">
@@ -26,9 +35,20 @@
             <div class="form-group col-lg-8">
                 <input type="text" class="form-control" name="thumb_url" required="" style="text-align: right" value="<%= @project.thumb_url %>">
             </div>
+             <label class="col-lg-4 control-label" style="margin-top: 7px">담당자 : </label>
+            <div class="form-group col-lg-8">
+                <input type="text" class="form-control" name="director" required="" style="text-align: right" value="<%= @project.director %>">
+            </div>
             <label class="col-lg-4 control-label" style="margin-top: 7px">순서 : </label>
             <div class="form-group col-lg-8">
                 <input type="text" class="form-control" name="order" required="" style="text-align: right" value="<%= @project.order %>">
+            </div>
+            <label class="col-lg-4 control-label">메인화면 게시여부 : </label>
+            <div class="form-group col-lg-4">
+                <input type="radio" name="is_main" value="true"  > YES
+            </div>
+            <div class="form-group col-lg-4">
+                <input type="radio" name="is_main" value="false" checked> NO 
             </div>
             <label class="col-lg-4 control-label" style="margin-top: 7px"></label>
             <div class="form-group col-lg-8">
@@ -38,3 +58,12 @@
         <!-- <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2015</small> </p> -->
     </div>
 </div>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+        $(function(){
+            var is_main = "<%= @project.is_main %>";
+            $('input:radio[name=is_main]:input[value='+is_main+']').attr("checked", true);
+        });
+    </script>
+<% end %>

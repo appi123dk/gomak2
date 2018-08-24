@@ -3,14 +3,10 @@
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
+			
 			<div class="content-wrap">
 
 				<div class="container clearfix">
-
-					<div class="heading-block nobottomborder center">
-						<h1>Geek Child 캐릭터 이미지</h1>
-					</div>
 
 					<div class="fslider bottommargin" data-animation="fade">
 						<div class="flexslider">
@@ -73,10 +69,9 @@
 
 					        <!-- Portfolio Single - Description
 					        ============================================= -->
-					        <p>프로젝트 내용설명</p>
 					        <!-- Portfolio Single - Description End -->
 
-					        <div class="line" style="margin: 40px 0;"></div>
+
 
 					        <!-- Portfolio Single - Meta
 					        ============================================= -->
@@ -85,6 +80,7 @@
 					            <li><span style="font-weight: bold; color: #bb2021">BRAND</span> | Hand & Malt</li>
 					            <li><span style="font-weight: bold; color: #bb2021">MEDIA</span> | Facebook / Instagram</li>
 					            <li><span style="font-weight: bold; color: #bb2021">DIRECTOR</span> | Ahn, Seong Hyun</a></li>
+					            <li>더 많은 프로젝트 구경하기</li>	
 					        </ul>
 					        <!-- Portfolio Single - Meta End -->
 
@@ -99,113 +95,29 @@
 					    <div class="col_three_fifth portfolio-single-image nobottommargin col_last">
 					        <iframe src="http://player.vimeo.com/video/80975867" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					    </div><!-- .portfolio-single-image end -->
-
+						
 					</div>
+					<div class="line" style="margin: 40px 0;"></div>
 					<!-- Portfolio Items
 					============================================= -->
 					<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-nomargin portfolio-ajax clearfix">
-
-						<article id="portfolio-item-1" data-loader="include/ajax/portfolio-ajax-image.php" class="portfolio-item pf-media pf-icons">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="/assets/renew/portfolio/4/1.jpg" alt="Open Imagination">
-								</a>
-								<div class="portfolio-overlay">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3 class="main-font"><a href="portfolio-single.html">Open Imagination</a></h3>
-								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-							</div>
-						</article>
-
-						<article id="portfolio-item-2" data-loader="include/ajax/portfolio-ajax-image.php" class="portfolio-item pf-illustrations">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="/assets/renew/portfolio/4/2.jpg" alt="Locked Steel Gate">
-								</a>
-								<div class="portfolio-overlay">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3 class="main-font"><a href="portfolio-single.html">Locked Steel Gate</a></h3>
-								<span><a href="#">Illustrations</a></span>
-							</div>
-						</article>
-
-						<article id="portfolio-item-3" data-loader="include/ajax/portfolio-ajax-video.php" class="portfolio-item pf-graphics pf-uielements">
-							<div class="portfolio-image">
-								<a href="#">
-									<img src="/assets/renew/portfolio/4/3.jpg" alt="Mac Sunglasses">
-								</a>
-								<div class="portfolio-overlay">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3 class="main-font"><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
-								<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-							</div>
-						</article>
-
-						<article id="portfolio-item-4" data-loader="include/ajax/portfolio-ajax-slider.php" class="portfolio-item pf-icons pf-illustrations">
-							<div class="portfolio-image">
-								<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
-									<div class="flexslider">
-										<div class="slider-wrap">
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/4.jpg" alt="Morning Dew"></a></div>
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/4-1.jpg" alt="Morning Dew"></a></div>
-										</div>
+						<% @projects.each do |project|  %>
+							<article id="portfolio-item-1" data-loader="include/ajax/portfolio-ajax-image.php" class="portfolio-item pf-media pf-icons">
+								<div class="portfolio-image">
+									<a href="portfolio-single.html">
+										<img src="<%= project.thumb_url %>" alt="Open Imagination">
+									</a>
+									<div class="portfolio-overlay">
+										<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
 									</div>
 								</div>
-								<div class="portfolio-overlay" data-lightbox="gallery">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
+								<div class="portfolio-desc">
+									<h3 class="main-font"><a href="portfolio-single.html"><%= project.project_name %></a></h3>
+									<span><%= project.media %></span>
 								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
-								<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
-							</div>
-						</article>
-
-						<article id="portfolio-item-5" data-loader="include/ajax/portfolio-ajax-image.php" class="portfolio-item pf-uielements pf-media">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="/assets/renew/portfolio/4/5.jpg" alt="Console Activity">
-								</a>
-								<div class="portfolio-overlay">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Console Activity</a></h3>
-								<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-							</div>
-						</article>
-
-						<article id="portfolio-item-6" data-loader="include/ajax/portfolio-ajax-gallery.php" class="portfolio-item pf-graphics pf-illustrations">
-							<div class="portfolio-image">
-								<div class="fslider" data-arrows="false">
-									<div class="flexslider">
-										<div class="slider-wrap">
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/6.jpg" alt="Shake It"></a></div>
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/6-1.jpg" alt="Shake It"></a></div>
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/6-2.jpg" alt="Shake It"></a></div>
-											<div class="slide"><a href="portfolio-single-gallery.html"><img src="/assets/renew/portfolio/4/6-3.jpg" alt="Shake It"></a></div>
-										</div>
-									</div>
-								</div>
-								<div class="portfolio-overlay" data-lightbox="gallery">
-									<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Shake It!</a></h3>
-								<span><a href="#">Illustrations</a>, <a href="#">Graphics</a></span>
-							</div>
-						</article>
+							</article>
+						<% end %>
+						
 
 					</div><!-- #portfolio end -->
 					<div class="promo promo-border bottommargin topmargin">

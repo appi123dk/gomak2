@@ -14,6 +14,10 @@ class ProjectsController < ApplicationController
 		project.brand_name = params[:brand_name]		
 		project.video_url = params[:video_url]		
 		project.thumb_url = params[:thumb_url]		
+		project.client = params[:client]		
+		project.media = params[:media]		
+		project.director = params[:director]		
+		project.is_main = params[:is_main]		
 		project.save
 
 		redirect_to '/projects/index'
@@ -29,7 +33,11 @@ class ProjectsController < ApplicationController
 		project.brand_name = params[:brand_name]		
 		project.video_url = params[:video_url]		
 		project.thumb_url = params[:thumb_url]		
-		project.order = params[:order]		
+		project.order = params[:order]
+		project.client = params[:client]		
+		project.media = params[:media]		
+		project.director = params[:director]		
+		project.is_main = params[:is_main]			
 		project.save
 
 		redirect_to '/projects/index'
