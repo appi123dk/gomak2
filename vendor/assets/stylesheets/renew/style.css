@@ -4486,14 +4486,14 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .portfolio-overlay a {
 	margin-right: -44px;
 }
 
-.portfolio-overlay a.center-icon {
+.portfolio-overlay a.center-icon-new {
 	display: block;
 	margin: -20px 0 0 -20px;
 	opacity: 0;
 }
 
-.portfolio-item:hover a.center-icon,
-.iportfolio:hover a.center-icon { opacity: 1; }
+.portfolio-item:hover a.center-icon-new,
+.iportfolio:hover a.center-icon-new { opacity: 1; }
 
 .portfolio-overlay a:hover {
 	color: #bb2021;

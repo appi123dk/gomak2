@@ -5,6 +5,7 @@ Myapp::Application.routes.draw do
 
   # 사이트 리뉴얼 주소
   get "mains/index"
+  get "mains/ajax", to: 'mains#ajax'
   get "mains/projects"
   get "mains/about"
   get "mains/contacts"

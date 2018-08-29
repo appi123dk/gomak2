@@ -22,4 +22,9 @@ class MainsController < ApplicationController
 	def contacts
 		render :layout => "renew"
 	end
+
+	def ajax
+		@project = Project.find(params[:project_id])
+		render json: @project
+	end
 end

@@ -38,7 +38,7 @@
 						</div>
 					</div>
 
-					<h1 class="special-font main-font">RECENT WORK</h1>
+					<h1 class="special-font main-font" id="recent">RECENT WORK</h1>
 					<hr/>
 
 					<div id="portfolio-ajax-wrap">
@@ -55,7 +55,7 @@
 					<div id="portfolio-ajax-single" class="clearfix" style="display:none; margin-bottom: 50px;"> 
 
 					    <div id="portfolio-ajax-title" style="position: relative;">
-					        <h2 class="main-font">PROJECT TITLE</h2>
+					        <h2 class="main-font" id="project_title"></h2>
 					        <div id="portfolio-navigation">
 					            <a href="#" id="close-portfolio"><i class="icon-line-cross"></i></a>
 					        </div>
@@ -76,11 +76,10 @@
 					        <!-- Portfolio Single - Meta
 					        ============================================= -->
 					        <ul class="portfolio-meta bottommargin">
-					            <li><span style="font-weight: bold; color: #bb2021">CLIENT</span> | 오비맥주</li>
-					            <li><span style="font-weight: bold; color: #bb2021">BRAND</span> | Hand & Malt</li>
-					            <li><span style="font-weight: bold; color: #bb2021">MEDIA</span> | Facebook / Instagram</li>
-					            <li><span style="font-weight: bold; color: #bb2021">DIRECTOR</span> | Ahn, Seong Hyun</a></li>
-					            <li>더 많은 프로젝트 구경하기</li>	
+					            <li><span style="font-weight: bold; color: #bb2021">CLIENT</span> <span id="client" style="width: 180px; font-weight:normal"></span></li>
+					            <li><span style="font-weight: bold; color: #bb2021">BRAND</span> <span id="brand" style="width: 180px; font-weight:normal"></span></li>
+					            <li><span style="font-weight: bold; color: #bb2021">MEDIA</span> <span id="media" style="width: 180px; font-weight:normal"></span></li>
+					            <li><span style="font-weight: bold; color: #bb2021">DIRECTOR</span> <span id="director" style="width: 180px; font-weight:normal"></span></li>
 					        </ul>
 					        <!-- Portfolio Single - Meta End -->
 
@@ -93,7 +92,7 @@
 					    <!-- Portfolio Single Image
 					    ============================================= -->
 					    <div class="col_three_fifth portfolio-single-image nobottommargin col_last">
-					        <iframe src="http://player.vimeo.com/video/80975867" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					        <iframe id="project_url" src="" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					    </div><!-- .portfolio-single-image end -->
 						
 					</div>
@@ -102,13 +101,13 @@
 					============================================= -->
 					<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-nomargin portfolio-ajax clearfix">
 						<% @projects.each do |project|  %>
-							<article id="portfolio-item-1" data-loader="include/ajax/portfolio-ajax-image.php" class="portfolio-item pf-media pf-icons">
+							<article id="portfolio-item-1" data-loader="/mains/ajax/<%= project.id %>" class="portfolio-item pf-media pf-icons">
 								<div class="portfolio-image">
 									<a href="portfolio-single.html">
 										<img src="<%= project.thumb_url %>" alt="Open Imagination">
 									</a>
 									<div class="portfolio-overlay">
-										<a href="#" class="center-icon"><i class="icon-line-expand"></i></a>
+										<a href="#recent" class="center-icon-new ajax-icon" data-id="<%= project.id %>" style="float:center"><i class="icon-line-expand"></i></a>
 									</div>
 								</div>
 								<div class="portfolio-desc">
@@ -141,8 +140,33 @@
 <% content_for :javascript do %>
   <script type="text/javascript">
     $(function() {
-    	$(".center-icon").click(function(){
+    	$(".center-icon-new").click(function(){
     		$("#portfolio-ajax-single").show(500);
+    		var target = $(this.getAttribute('href')),
+    			project_id = $(this).attr("data-id");
+		    if( target.length ) {
+		        event.preventDefault();
+		        $('html, body').stop().animate({
+		            scrollTop: target.offset().top
+		        }, 1000);
+		    }
+		    console.log(project_id);
+		    $.ajax({
+                data: {
+                    project_id: project_id
+                },
+                method: "GET",
+                url: "/mains/ajax",
+                success: function(project){
+                	$("#media").html(project.media);
+                	$("#director").html(project.director);
+                	$("#brand").html(project.brand_name);
+                	$("#client").html(project.client);
+                	$("#project_title").text(project.project_name);
+                	$("#project_url").attr('src', 'https://www.youtube.com/embed/'+project.video_url )
+                }
+            });
+    		
     	});
 
     	$("#close-portfolio").click(function(){
