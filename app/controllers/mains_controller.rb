@@ -5,7 +5,7 @@ class MainsController < ApplicationController
 	end
 
 	def projects
-		@projects = Project.all
+		@projects = Project.all.reverse_order
 		render :layout => "renew"
 	end
 
